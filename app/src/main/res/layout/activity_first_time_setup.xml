@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FirstTimeSetupActivity">
+
+    <EditText
+        android:id="@+id/masterPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="12"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="128dp"
+        android:hint="Enter Master Password"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/masterPasswordConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="12"
+        android:layout_gravity="center_horizontal"
+        android:hint="Confirm Master Password"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/strength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password Strength"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center_horizontal"
+        tools:text="Password Strength" />
+
+    <ProgressBar
+        android:id="@+id/strengthBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="40dp"
+        android:layout_height="3dp" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:onClick="login"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>
