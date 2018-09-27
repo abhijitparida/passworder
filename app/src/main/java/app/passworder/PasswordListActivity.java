@@ -1,5 +1,8 @@
 package app.passworder;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -9,8 +12,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -55,9 +60,21 @@ public class PasswordListActivity extends AppCompatActivity {
             convertView = layoutInflater.inflate(R.layout.item_password, parent, false);
             TextView website = convertView.findViewById(R.id.website);
             TextView password = convertView.findViewById(R.id.password);
-            Password p = passwords.get(position);
+            final Password p = passwords.get(position);
             website.setText(p.getWebsite());
             password.setText("Password: " + p.generatePassword(masterPassword));
+
+            Button copyPassword = convertView.findViewById(R.id.copyPassword);
+            copyPassword.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                    ClipData clip = ClipData.newPlainText("password", p.generatePassword(masterPassword));
+                    clipboard.setPrimaryClip(clip);
+                    Toast.makeText(PasswordListActivity.this, "Password copied", Toast.LENGTH_SHORT).show();
+                }
+            });
+
             return convertView;
         }
     }
