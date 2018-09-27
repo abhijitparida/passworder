@@ -2,7 +2,7 @@
 
 Passworder is a password manager offering secure storage and offline cross device password access.
 
-Current release: [v1.0](https://github.com/abhijitparida/passworder/releases/tag/1.0)
+Current release: [v1.1](https://github.com/abhijitparida/passworder/releases)
 
 [Software Requirements Specification](doc/SRS%20Document.pdf)
 
