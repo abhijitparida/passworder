@@ -25,7 +25,8 @@ public class Password {
             "qwerty", "12345", "123456789", "letmein", "1234567", "football",
             "iloveyou", "admin", "welcome", "monkey", "login", "abc123",
             "starwars", "123123", "dragon", "passw0rd", "master", "hello",
-            "freedom", "whatever", "qazwsx", "trustno1"};
+            "freedom", "whatever", "qazwsx", "trustno1", "football", "696969", "batman",
+              "secret"};
 
         for (int i = 0; i < commonlyUsedPasswords.length; i++) {
             if (commonlyUsedPasswords[i].equalsIgnoreCase(password)) {
