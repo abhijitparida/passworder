@@ -13,4 +13,4 @@ Current release: [v1.1](https://github.com/abhijitparida/passworder/releases)
 * Deepak Kumar Singh
 * [Sandeep Dash](https://github.com/sandeep007dash)
 * [Sourav Bastia](https://github.com/souravbastia)
-* [Swaraj Laha](https://github.com/swarajlaha)
+* Swaraj Laha - [GitHub](https://github.com/swarajlaha) | [LinkedIn](https://www.linkedin.com/in/swarajlaha/)
