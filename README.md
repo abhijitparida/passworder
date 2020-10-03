@@ -4,7 +4,7 @@ Passworder is a password manager offering secure storage and offline cross devic
 
 ## Purpose?
 
-Passworder is a password manager providing resolution to two major problems faced by users concerned
+It is a password manager providing resolution to two major problems faced by users concerned
 about their online privacy: memorizing secure passwords and accessing stored passwords across
 all of their devices. The former is addressed by offering secure storage of passwords; and the
 latter is addressed by generating passwords based on a master password. 
