@@ -28,21 +28,20 @@ public class Password {
             "freedom", "whatever", "qazwsx", "trustno1", "football", "696969", "batman",
               "secret"};
 
-        for (int i = 0; i < commonlyUsedPasswords.length; i++) {
-            if (commonlyUsedPasswords[i].equalsIgnoreCase(password)) {
+        for (String commonlyUsedPassword : commonlyUsedPasswords) {
+            if (commonlyUsedPassword.equalsIgnoreCase(password) || commonlyUsedPassword.startsWith(password.toLowerCase())) {
                 return new Strength(0, "Commonly used password");
             }
         }
 
         if (password.length() < 5) {
             return new Strength(30, "Weak password");
-        }
-
-        if (password.length() < 8) {
+        } else if (password.length() < 8) {
             return new Strength(60, "Strong password");
+        } else {
+            return new Strength(100, "Secure password");
         }
 
-        return new Strength(100, "Secure password");
     }
 
     public static String md5(String password) {
